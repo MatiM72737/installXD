@@ -38,7 +38,7 @@ git clone https://github.com/michaelScopic/Wallpapers.git ~/wallpapers
 
 mkdir -p ~\.cache\paru\clone\davinci-resolve-studio
 cd ~\.cache\paru\clone\davinci-resolve-studio
-wget 
+wget -O DaVinci_Resolve_Studio_20.0_Linux.zip https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375
 
 cd ~
 
@@ -58,3 +58,6 @@ sudo systemctl enable getty@tty1
 
 sudo mkdir -p /etc\systemd\system\getty@tty1.service.d
 sudo wget -O /etc\systemd\system\getty@tty1.service.d\override.conf https://raw.githubusercontent.com/MatiM72737/installXD/refs/heads/main/override.conf
+
+chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish
