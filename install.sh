@@ -1,3 +1,5 @@
+echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/00-$USER-nopasswd
+
 sudo pacman -Syu
 sudo pacman -S base-devel git linux-headers nano --needed
 
@@ -62,3 +64,5 @@ sudo wget -O /etc\systemd\system\getty@tty1.service.d\override.conf https://raw.
 
 chsh -s /usr/bin/fish
 sudo chsh -s /usr/bin/fish
+
+sudo rm -f /etc/sudoers.d/00-$USER-nopasswd
