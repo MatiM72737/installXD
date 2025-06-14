@@ -47,7 +47,7 @@ cd /opt/resolve/libs
 sudo rm -rf disabled-libraries
 sudo mkdir disabled-libraries && sudo mv libglib* libgio* libgmodule* disabled-libraries
 sudo /usr/bin/perl -pi -e 's/\x74\x11\xe8\x21\x23\x00\x00/\xeb\x11\xe8\x21\x23\x00\x00/g' /opt/resolve/bin/resolve
-
+sudo rm -rf /etc/default/cpupower
 sudo wget -O /etc/default/cpupower https://raw.githubusercontent.com/MatiM72737/installXD/main/cpupower
 
 
@@ -57,6 +57,7 @@ sudo systemctl restart cpupower.service
 sudo systemctl enable getty@tty1
 
 sudo mkdir -p /etc\systemd\system\getty@tty1.service.d
+sudo rm -rf /etc\systemd\system\getty@tty1.service.d\override.conf
 sudo wget -O /etc\systemd\system\getty@tty1.service.d\override.conf https://raw.githubusercontent.com/MatiM72737/installXD/refs/heads/main/override.conf
 
 chsh -s /usr/bin/fish
