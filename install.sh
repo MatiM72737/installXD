@@ -37,7 +37,7 @@ cd "$HOME"
 
 git clone https://github.com/michaelScopic/Wallpapers.git "$HOME/wallpapers"
 
-
+paru -S davinci-resolve-studio
 #mkdir -p "$HOME/.cache/paru/clone/davinci-resolve-studio"
 #wget --trust-server-names --content-disposition --no-check-certificate -O "$HOME/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip" "https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375"
 
@@ -107,7 +107,7 @@ MEMLOCK_LINE="@audio           -       memlock         unlimited"
 grep -qxF "$RTPRIO_LINE" "$LIMITS_FILE" || echo "$RTPRIO_LINE" | sudo tee -a "$LIMITS_FILE"
 grep -qxF "$MEMLOCK_LINE" "$LIMITS_FILE" || echo "$MEMLOCK_LINE" | sudo tee -a "$LIMITS_FILE"
 
-"hyprpm update
+echo "hyprpm update
 
 hyprpm add https://github.com/shezdy/hyprsplit
 hyprpm enable hyprsplit
