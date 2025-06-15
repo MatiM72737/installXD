@@ -116,6 +116,6 @@ hyprpm add https://github.com/KZDKM/Hyprspace
 hyprpm enable Hyprspace" >> "$HOME/plugins.sh"
 chmod +x "$HOME/plugins.sh"
 
-Hyprland
-
 sudo rm -f /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
+
+Hyprland
