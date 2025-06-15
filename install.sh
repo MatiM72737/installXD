@@ -27,14 +27,6 @@ make all && sudo make install
 
 cd ~
 
-hyprpm update
-
-hyprpm add https://github.com/shezdy/hyprsplit
-hyprpm enable hyprsplit
-
-hyprpm add https://github.com/KZDKM/Hyprspace
-hyprpm enable Hyprspace
-
 git clone https://github.com/MatiM72737/.myHyprDots.git MyHyprDots
 cd MyHyprDots
 stow --adopt *
@@ -46,8 +38,7 @@ git clone https://github.com/michaelScopic/Wallpapers.git ~/wallpapers
 
 
 mkdir -p ~/.cache/paru/clone/davinci-resolve-studio
-cd ~/.cache/paru/clone/davinci-resolve-studio
-wget -O DaVinci_Resolve_Studio_20.0_Linux.zip https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375
+wget -O ~/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375
 
 cd ~
 
@@ -116,3 +107,13 @@ grep -qxF "$RTPRIO_LINE" "$LIMITS_FILE" || echo "$RTPRIO_LINE" | sudo tee -a "$L
 grep -qxF "$MEMLOCK_LINE" "$LIMITS_FILE" || echo "$MEMLOCK_LINE" | sudo tee -a "$LIMITS_FIL>
 
 sudo rm -f /etc/sudoers.d/00-$USER-nopasswd
+
+Hyprland
+
+hyprpm update
+
+hyprpm add https://github.com/shezdy/hyprsplit
+hyprpm enable hyprsplit
+
+hyprpm add https://github.com/KZDKM/Hyprspace
+hyprpm enable Hyprspace
