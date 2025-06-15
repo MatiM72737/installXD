@@ -73,7 +73,7 @@ sudo wget -O /etc/systemd/system/getty@tty1.service.d/override.conf https://raw.
 chsh -s /usr/bin/fish
 sudo chsh -s /usr/bin/fish
 
-NEW_ARGS="nvidia-drm.modeset=1 nvidia-drm.fbdev=0 splash quiet vt.global_cursor_default=0 nvidia.NVreg_PreserveVideoMemoryAllocations=1 intel_iommu=on iommu=pt"
+NEW_ARGS="nvidia-drm.modeset=1 nvidia-drm.fbdev=0 splash quiet vt.global_cursor_default=0 nvidia.NVreg_PreserveVideoMemoryAllocations=1 intel_iommu=on iommu=pt usbcore.autosuspend=-1 threadirqs mitigations=off idle=nomwait"
 
 # Plik konfiguracyjny GRUB-a
 GRUB_FILE="/etc/default/grub"
