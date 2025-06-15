@@ -1,3 +1,14 @@
+cd "$HOME"
+
+git clone https://github.com/MatiM72737/.myHyprDots.git MyHyprDots
+cd MyHyprDots
+stow --adopt *
+git restore .
+
+cd "$HOME"
+
+git clone https://github.com/michaelScopic/Wallpapers.git "$HOME/wallpapers"
+
 sudo /opt/brother/Printers/dcpj105/cupswrapper/cupswrapperdcpj105
 
 sudo systemctl enable cups
