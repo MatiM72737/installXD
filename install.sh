@@ -107,14 +107,15 @@ MEMLOCK_LINE="@audio           -       memlock         unlimited"
 grep -qxF "$RTPRIO_LINE" "$LIMITS_FILE" || echo "$RTPRIO_LINE" | sudo tee -a "$LIMITS_FILE"
 grep -qxF "$MEMLOCK_LINE" "$LIMITS_FILE" || echo "$MEMLOCK_LINE" | sudo tee -a "$LIMITS_FILE"
 
-Hyprland
-
-hyprpm update
+"hyprpm update
 
 hyprpm add https://github.com/shezdy/hyprsplit
 hyprpm enable hyprsplit
 
 hyprpm add https://github.com/KZDKM/Hyprspace
-hyprpm enable Hyprspace
+hyprpm enable Hyprspace" >> "$HOME/plugins.sh"
+chmod +x "$HOME/plugins.sh"
+
+Hyprland
 
 sudo rm -f /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
