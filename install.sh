@@ -128,4 +128,4 @@ chmod +x "$HOME/plugins.sh"
 
 sudo rm -f /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
 
-Hyprland
+echo "OKKKKK"
