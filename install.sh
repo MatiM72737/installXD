@@ -38,10 +38,10 @@ cd "$HOME"
 git clone https://github.com/michaelScopic/Wallpapers.git "$HOME/wallpapers"
 
 
-mkdir -p "$HOME/.cache/paru/clone/davinci-resolve-studio"
-wget --trust-server-names --content-disposition --no-check-certificate -O "$HOME/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip" "https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375"
+#mkdir -p "$HOME/.cache/paru/clone/davinci-resolve-studio"
+#wget --trust-server-names --content-disposition --no-check-certificate -O "$HOME/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip" "https://drive.usercontent.google.com/download?id=1XJH86ze0tHDGU5Z3kU6VVfxTukNaq0lP&export=download&authuser=0&confirm=t&uuid=ddc96146-94fc-441f-83af-426c0b7dc3fb&at=AN8xHooVxk-lxryw-mojyfjfGSXs%3A1749926599375"
 
-cd "$HOME"
+#cd "$HOME"
 
 paru -S davinci-resolve-studio
 cd /opt/resolve/libs
