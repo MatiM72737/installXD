@@ -1,6 +1,6 @@
-echo "$(logname) ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/00-$(logname)-nopasswd
-
-sudo chmod 440 /etc/sudoers.d/00-$USER-nopasswd
+SUDO_USER_NAME="$(logname)"
+echo "$SUDO_USER_NAME ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
+sudo chmod 440 /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
 
 sudo pacman -Syu
 sudo pacman -S base-devel git linux-headers nano --needed
