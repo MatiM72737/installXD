@@ -1,4 +1,5 @@
-echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/00-$USER-nopasswd
+echo "$(logname) ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/00-$(logname)-nopasswd
+
 sudo chmod 440 /etc/sudoers.d/00-$USER-nopasswd
 
 sudo pacman -Syu
