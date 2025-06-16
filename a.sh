@@ -11,3 +11,6 @@ sudo groupadd render
 sudo groupadd audio
 
 sudo usermod -aG video,render,disk,audio,wheel $USER
+
+chsh -s /usr/bin/fish
+sudo chsh -s /usr/bin/fish
