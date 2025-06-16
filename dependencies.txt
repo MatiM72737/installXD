@@ -109,3 +109,4 @@ xdg-desktop-portal-gtk
 stow
 fastfetch
 hyprsunset-git
+ntfs-3g
