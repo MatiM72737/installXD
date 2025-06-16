@@ -14,7 +14,4 @@ bash ./a.sh
 
 sudo rm -f /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
 
-chsh -s /usr/bin/fish
-sudo chsh -s /usr/bin/fish
-
 echo "OKKKKK"
