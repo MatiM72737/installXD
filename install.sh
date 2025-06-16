@@ -14,7 +14,10 @@ cd "$HOME"
 
 paru -Syu
 
-paru -S firefox hyprshot oh-my-posh-bin libxcrypt-compat imagemagick cpupower perl fuse2 aylurs-gtk-shell-git lib32-libcups meson vala valadoc gobject-introspection gtk-layer-shell libastal-git jq bibata-cursor-theme-bin ttf-meslo-nerd ttf-meslo-nerd-font-powerlevel10k socat qt6ct kvantum cups brother-dcpj105 swww btop imv vlc ventoy-bin pwvucontrol yabridge yabridgectl downgrade egl-wayland vesktop-bin ayugram-desktop-bin pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber nautilus-admin-gtk4 qpwgraph nautilus nautilus-empty-file nautilus-gnome-disks nautilus-mediainfo-gtk4 nwg-look ghostty code wget curl fish nvidia nvidia-utils lib32-nvidia-utils nvidia-settings gtk4 gtk3 ninja gcc cmake meson libxcb xcb-proto xcb-util xcb-util-keysyms libxfixes libx11 libxcomposite libxrender libxcursor pixman wayland-protocols cairo pango libxkbcommon xcb-util-wm xorg-xwayland libinput libliftoff libdisplay-info cpio tomlplusplus hyprlang-git hyprcursor-git hyprwayland-scanner-git xcb-util-errors hyprutils-git glaze hyprgraphics-git aquamarine-git re2 hyprland-qtutils hyprpolkitagent qbittorrent wl-clip-persist wl-clipboard sweet-gtk-theme-git sweet-folders-icons-git hyprlock hypridle hyprpicker obs-studio xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk stow fastfetch hyprsunset --needed
+while IFS= read -r pkg; do
+  [[ -z "$pkg" ]] && continue
+  paru -S --noconfirm "$pkg"
+done < dependencies.txt
 
 sudo /opt/brother/Printers/dcpj105/cupswrapper/cupswrapperdcpj105
 
@@ -39,14 +42,14 @@ git clone https://github.com/michaelScopic/Wallpapers.git "$HOME/wallpapers"
 
 paru -S davinci-resolve-studio
 #mkdir -p "$HOME/.cache/paru/clone/davinci-resolve-studio"
-wget --trust-server-names --content-disposition --no-check-certificate -O "$HOME/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip" "http://192.168.227.165:8080/DaVinci_Resolve_Studio_20.0_Linux-1.zip"
+wget --trust-server-names --no-check-certificate -O "$HOME/.cache/paru/clone/davinci-resolve-studio/DaVinci_Resolve_Studio_20.0_Linux.zip" "http://192.168.136.155:1234/Download%2FDaVinci_Resolve_Studio_20.0_Linux-1.zip?forcedownload"
 
 #cd "$HOME"
 
 paru -S davinci-resolve-studio
 cd /opt/resolve/libs
 sudo rm -rf disabled-libraries
-sudo mkdir disabled-libraries && sudo mv libglib* libgio* libgmodule* disabled-libraries
+sudo mkdir /opt/resolve/libs/disabled-libraries && sudo mv libglib* libgio* libgmodule* /opt/resolve/libs/disabled-libraries
 sudo /usr/bin/perl -pi -e 's/\x74\x11\xe8\x21\x23\x00\x00/\xeb\x11\xe8\x21\x23\x00\x00/g' /opt/resolve/bin/resolve
 
 sudo rm -rf /etc/default/cpupower
