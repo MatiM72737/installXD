@@ -124,5 +124,5 @@ vulkan-validation-layers
 mangohud
 vulkan-headers
 lutris
-spotify-1.1
+spotify
 zip
