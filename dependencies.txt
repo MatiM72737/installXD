@@ -124,6 +124,6 @@ vulkan-validation-layers
 mangohud
 vulkan-headers
 lutris
-spotify
+spotify-1.1
 zip
 libayatana-appindicator-glib
