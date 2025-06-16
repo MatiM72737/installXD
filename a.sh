@@ -6,3 +6,8 @@ MEMLOCK_LINE="@audio           -       memlock         unlimited"
 grep -qxF "$RTPRIO_LINE" "$LIMITS_FILE" || echo "$RTPRIO_LINE" | sudo tee -a "$LIMITS_FILE"
 grep -qxF "$MEMLOCK_LINE" "$LIMITS_FILE" || echo "$MEMLOCK_LINE" | sudo tee -a "$LIMITS_FILE"
 
+
+sudo groupadd render
+sudo groupadd audio
+
+sudo usermod -aG video,render,disk,audio,wheel $USER
