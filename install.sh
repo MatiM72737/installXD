@@ -10,8 +10,6 @@ bash ./h.sh
 
 bash ./r.sh
 
-bash ./r.sh
-
 bash ./a.sh
 
 sudo rm -f /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
