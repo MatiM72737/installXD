@@ -110,4 +110,4 @@ stow
 fastfetch
 hyprsunset-git
 ntfs-3g
-mangohud-git
+mangohud
