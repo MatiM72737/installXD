@@ -4,6 +4,8 @@ sudo chmod 440 /etc/sudoers.d/00-$SUDO_USER_NAME-nopasswd
 
 bash ./i.sh
 
+bash ./n.sh
+
 bash ./h.sh
 
 bash ./r.sh
