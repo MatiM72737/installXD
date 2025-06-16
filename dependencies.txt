@@ -126,3 +126,4 @@ vulkan-headers
 lutris
 spotify
 zip
+libayatana-appindicator-glib
