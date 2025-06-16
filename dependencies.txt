@@ -7,6 +7,7 @@ cpupower
 perl
 fuse2
 aylurs-gtk-shell-git
+hyprsunset-git
 lib32-libcups
 meson
 vala
@@ -108,7 +109,6 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-gtk
 stow
 fastfetch
-hyprsunset-git
 ntfs-3g
 mangohud
 lib32-libpipewire
