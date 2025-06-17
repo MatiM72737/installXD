@@ -38,7 +38,6 @@ vesktop-bin
 ayugram-desktop-bin
 pipewire
 pipewire-alsa
-pipewire-jack
 pipewire-pulse
 wireplumber
 nautilus-admin-gtk4
@@ -127,3 +126,4 @@ lutris
 spotify
 zip
 libayatana-appindicator-glib
+pipewire-jack
